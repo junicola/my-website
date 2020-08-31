@@ -21,8 +21,10 @@ function menuDrop() {
     if(ul.classList.contains("drop-ativo")) {
         ul.classList.remove("drop-ativo")
         ul.classList.add("drop-desativo");
+        ul.style.opacity = 0;
     } else {
         ul.classList.remove("drop-desativo")
         ul.classList.add("drop-ativo")
+        ul.style.opacity = 1;
     }
 }

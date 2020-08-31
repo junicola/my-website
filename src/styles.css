@@ -108,7 +108,7 @@ h2 {
 .header-img{
     padding-left: 20px;
     font-size: 32px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 .header-img img{
     width: 30px;
@@ -180,17 +180,18 @@ h1 {
 #light {
     animation: flicker 4s infinite 2s step-end;
 }
-
 #home::after {
     content: " ";
     background-image: url(./images/wave-white.svg);
-    height: 400px;
+    height: 565px;
     width: 100%;
     position: absolute;
     z-index: -9;
     background-repeat: no-repeat;
+    background-position: top;
     background-size: cover;
-    bottom: 140px;
+    bottom: 120px;
+    overflow: hidden;
 }
 
 /*SOBRE*/
@@ -225,6 +226,7 @@ h1 {
     background-repeat: no-repeat;
     background-size: cover;
     bottom: 0px;
+    overflow: hidden;
 }
 #sobre-mim img {
     width: 250px;
@@ -544,9 +546,42 @@ button:focus {
 
 
 /*RESPONSIVO*/
+@media only screen and (max-width: 2560px) {
+    #footer {
+        background-size: cover;
+    }
+    #blog {
+        background-size: contain;
+    }
+}
+@media only screen and (max-width: 1440px) {
+    #blog {
+        background-size: unset;
+    }
+    #footer {
+        background-size: unset;
+    }
+    #home::after {
+        height: 400px;
+        bottom: 80px;
+    }
+}
 @media only screen and (max-width: 1200px) {
     .container {
         width: 960px;
+    }
+    #pc-svg {
+        padding:0;
+    }
+    #home p {
+        font-size: 18px;
+        padding: 22px 0px;
+    }
+    #home h1 {
+        font-size: 40px;
+    }
+    #home .purple-btn {
+        margin: 0 50px;
     }
 }
 
@@ -579,33 +614,112 @@ button:focus {
         padding-right: 20px;
     }
     .drop-ativo {
-        background-color: #4d4865d5;
+        background-color: #d2a3dde1;
         list-style-type: none;
         z-index: 99;
-        height: 250px;
-        width: 200px;
+        height: 350px;
+        width: 100%;
         display: block;
         position: fixed;
         right: 0px;
         top: 44px;
+        transition: .4s;
+
     }
     .drop-ativo a  {
         color: white;
         text-decoration: none;
     }
     .drop-ativo li {
-        padding-bottom: 20px;
+        padding-top: 30px;
+        font-size: 20px;
+        padding-left: 20px;
     }
     .drop-desativo {
-        display:none;
+        background-color: #d1a3ddd5;
+        list-style-type: none;
+        z-index: 99;
+        height: 350px;
+        width: 100%;
+        display: block;
+        position: fixed;
+        right: 0px;
+        top: 44px;
+        transition: .4s;
+        opacity: 0;
+    }
+    .drop-desativo a  {
+        color: white;
+        text-decoration: none;
+    }
+    .drop-desativo li {
+        padding-top: 30px;
+        font-size: 20px;
+        padding-left: 20px;
+    }
+    #home::after {
+        bottom: 165px;
     }
     #experiencia {
         flex-direction: column;
+        align-items: center;
     }
     #box-graduacao, #box-trabalho {
-        width: 100%;
+        width: 90%;
         padding: 10px;
         margin-bottom: 80px;
+    }
+    #pc-svg{
+        width: 40%;
+    }
+    #sobre-mim{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #sobre-mim p{
+        margin: 80px 10px 10px 10px;
+    }
+    #tecnologias ul {
+        flex-wrap: wrap;
+    }
+    #tecnologias ul li {
+        width: 45%;
+        margin-bottom: 60px;
+    }
+    #projetos .container {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    #projetos .container div {
+        width: 90%;
+        margin-bottom: 50px;
+    }
+    #projetos .purple-btn {
+        margin: 0 20px;
+        text-align: center;
+    }
+    #blog ul {
+        flex-direction: column;
+    }
+    #blog li {
+        width: 60%;
+        margin-bottom: 50px;
+    }
+    #contato .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #contato .container div{
+        width: 90%;
+        text-align: center;
+    }
+    #contato .container form{ 
+        width: 90%;
+    }
+    #contato ul {
+        justify-content: center;
+        margin-bottom: 100px;
     }
 
 }
@@ -613,5 +727,55 @@ button:focus {
 @media only screen and (max-width: 576px) {
     .container {
         width: 100%;
+    }
+    #home h1 {
+        font-size: 32px;
+    }
+    #home p {
+        font-size: 16px;
+    }
+    #home .purple-btn {
+        font-size: 12px;
+        padding: 5px 5px;
+        margin: 0px 80px;
+    }
+    #home {
+        flex-direction: column;
+        justify-content: center;
+    }
+    #home::after{
+        height: 410px;
+        bottom: 20px;
+    }
+    #pc-svg{
+        align-self: flex-end;
+        margin-right: 20px;
+        width: 65%;
+        margin-top: 40px;
+    }
+    #sobre {
+        margin: 0;
+    }
+    #sobre::after {
+    height: 64px;
+    }
+    #tecnologias ul {
+        justify-content: space-around;
+    }
+    #projetos {
+        padding-bottom: 100px;
+    }
+    #contato {
+        padding-top: 100px;
+    }
+    #ver-mais {
+        margin:  0;
+    }
+    #contato button {
+        width: 50%;
+    }
+    #to-top-btn {
+        bottom: 5px;
+        right: 0px;
     }
 }
