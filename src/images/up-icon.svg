@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="103" height="103" viewBox="0 0 103 103">
+  <g id="up-icon" transform="translate(0 103) rotate(-90)">
+    <circle id="Elipse_70" data-name="Elipse 70" cx="51.5" cy="51.5" r="51.5" fill="#a68ecc"/>
+    <path id="arrow-1" d="M52.171,102.057l-16.4-16.4A1.093,1.093,0,0,0,34.221,87.2l14.536,14.538H1.094a1.094,1.094,0,1,0,0,2.188H48.756L34.221,118.461a1.093,1.093,0,0,0,1.546,1.546l16.4-16.4A1.093,1.093,0,0,0,52.171,102.057Z" transform="translate(23.861 -51.927)" fill="#fff" stroke="#fff" stroke-width="1"/>
+  </g>
+</svg>
