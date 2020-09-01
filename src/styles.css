@@ -23,6 +23,9 @@ body {
     margin: 0;
     line-height: 30px;
 }
+a {
+    text-decoration: none;
+}
 .container {
     width: 1140px;
 }
@@ -127,11 +130,17 @@ h1 {
     font-size: 60px;
 }
 #home {
+    height: 1000px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     text-align: center;
     padding-top: 140px;
+    background-image: url(./images/wave-white.svg);
+    background-size: cover;
+    background-position-y: top;
+    background-position-x: center;
+    background-repeat: no-repeat;
 }
 #intro{
     display: flex;
@@ -180,7 +189,7 @@ h1 {
 #light {
     animation: flicker 4s infinite 2s step-end;
 }
-#home::after {
+/* #home::after {
     content: " ";
     background-image: url(./images/wave-white.svg);
     height: 565px;
@@ -192,7 +201,7 @@ h1 {
     background-size: cover;
     bottom: 120px;
     overflow: hidden;
-}
+} */
 
 /*SOBRE*/
 #sobre {
@@ -202,7 +211,6 @@ h1 {
     flex-direction: column;
     align-items: center;
     padding-top: 200px;
-    margin-top: 100px;
 }
 #sobre h2 {
     margin: 0;
@@ -561,10 +569,7 @@ button:focus {
     #footer {
         background-size: unset;
     }
-    #home::after {
-        height: 400px;
-        bottom: 80px;
-    }
+   
 }
 @media only screen and (max-width: 1200px) {
     .container {
@@ -572,6 +577,9 @@ button:focus {
     }
     #pc-svg {
         padding:0;
+    }
+    #home {
+        height: 800px;
     }
     #home p {
         font-size: 18px;
@@ -595,6 +603,9 @@ button:focus {
 @media only screen and (max-width: 768px) {
     .container {
         width: 540px;
+    }
+    #home {
+        height: 700px;
     }
     #header {
         display: none;
@@ -641,7 +652,7 @@ button:focus {
         z-index: 99;
         height: 350px;
         width: 100%;
-        display: block;
+        display: none;
         position: fixed;
         right: 0px;
         top: 44px;
@@ -657,9 +668,6 @@ button:focus {
         font-size: 20px;
         padding-left: 20px;
     }
-    #home::after {
-        bottom: 165px;
-    }
     #experiencia {
         flex-direction: column;
         align-items: center;
@@ -671,6 +679,9 @@ button:focus {
     }
     #pc-svg{
         width: 40%;
+    }
+    #sobre {
+        padding-top: 80px;
     }
     #sobre-mim{
         flex-wrap: wrap;
@@ -728,6 +739,10 @@ button:focus {
     .container {
         width: 100%;
     }
+    #home {
+        padding-top: 0px;
+        height: 900px;
+    }
     #home h1 {
         font-size: 32px;
     }
@@ -744,8 +759,8 @@ button:focus {
         justify-content: center;
     }
     #home::after{
-        height: 410px;
-        bottom: 20px;
+        height: 380px;
+        bottom: 0px;
     }
     #pc-svg{
         align-self: flex-end;
